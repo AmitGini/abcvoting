@@ -1361,6 +1361,7 @@ def test_maximin_support():
     )
 
 
+@pytest.mark.networkx
 @pytest.mark.gurobipy
 @pytest.mark.parametrize("rule_id", ["maximin-support"])
 @pytest.mark.parametrize("num_voters", [25, 50])
@@ -1423,6 +1424,7 @@ def test_maximin_support_nx_max_flow_random_profiles(rule_id, num_voters, num_ca
         pass
 
 
+@pytest.mark.networkx
 @pytest.mark.parametrize("rule_id", ["maximin-support"])
 @pytest.mark.parametrize("algorithm", ["nx-max-flow"])
 def test_maximin_support_nx_invalid_committeesize(rule_id, algorithm):
@@ -1447,6 +1449,7 @@ def test_maximin_support_nx_invalid_committeesize(rule_id, algorithm):
         )
 
 
+@pytest.mark.networkx
 @pytest.mark.parametrize("rule_id", ["maximin-support"])
 @pytest.mark.parametrize("algorithm", ["nx-max-flow"])
 def test_maximin_support_nx_invalid_committeesize_exceeds_candidates(rule_id, algorithm):
@@ -1463,6 +1466,7 @@ def test_maximin_support_nx_invalid_committeesize_exceeds_candidates(rule_id, al
         )
 
 
+@pytest.mark.networkx
 @pytest.mark.parametrize("rule_id", ["maximin-support"])
 @pytest.mark.parametrize("algorithm", ["nx-max-flow"])
 def test_maximin_support_nx_with_too_few_approved_candidates_and_max_num_of_committee(
@@ -1486,6 +1490,7 @@ def test_maximin_support_nx_with_too_few_approved_candidates_and_max_num_of_comm
     assert len(committees) == max_num_of_committees
 
 
+@pytest.mark.networkx
 @pytest.mark.parametrize("rule_id", ["maximin-support"])
 @pytest.mark.parametrize("algorithm", ["nx-max-flow"])
 def test_maximin_support_nx_max_flow_irresolute_and_max_num_of_committee(rule_id, algorithm):
